@@ -1,0 +1,166 @@
+
+@font-face {
+    font-family:Poppins;
+    src: url(/Poppins/Poppins-Regular.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+    background-color:black;
+
+}
+
+
+
+
+main{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translatex(100%);
+    transition: opacity 1s ease,transform 1s ease;
+    max-height:100%;
+}
+
+body.loaded main{
+    opacity: 1;
+    transform: translatex(0);
+}
+
+main>div:nth-child(1){
+    
+    opacity: 0;
+    transform: translatex(100%);
+    transition: opacity 2s ease,transform 2s ease;
+    transition-delay: 0.5s;
+}
+
+main>div:nth-child(2){
+    opacity: 0;
+    transform: translatex(100%);
+    transition: opacity 2s ease,transform 2s ease;
+    transition-delay: 1s;
+}
+main>div:nth-child(3){
+    opacity: 0;
+    transform: translatex(100%);
+    transition: opacity 2s ease,transform 2s ease;
+    transition-delay: 1.5s;
+}
+
+body.loaded main>div{
+    opacity:1;
+    transform: translateX(0);
+}
+
+
+.asset{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding:8px;
+    max-height:100%;
+}
+
+
+.asset img{
+    height:50px ;
+    width:50px ;
+}
+
+.asset a{
+    position:relative;
+    left: 35px;
+    bottom:20px;
+    text-decoration: none;
+    font-family: Poppins;
+    color: white;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.asset p{
+    
+}
+
+
+.logging{
+    margin-bottom: 16px;
+    padding: 8px;
+    max-height:100%;
+}
+
+.logging img{
+    height:50px ;
+    width:50px ;
+}
+
+.logging a{
+    position:relative;
+    left: 35px;
+    bottom:20px;
+    text-decoration: none;
+    font-family: Poppins;
+    color: white;
+    font-size: 32px;
+    font-weight: 400;
+    
+}
+
+.logging p{
+    
+}
+
+.alert{
+    padding: 8px;
+    max-height:100%;
+}
+
+.alert img{
+    height:50px ;
+    width:50px ;
+}
+
+.alert a{
+    position:relative;
+    left: 35px;
+    bottom:20px;
+    text-decoration: none;
+    font-family: Poppins;
+    color: white;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.alert p{
+    
+}
+
+.asset a{
+    transition: color 1s ease;
+}
+
+.asset a:hover{
+    color: rgba(58, 58, 239, 0.913);
+}
+
+.logging a{
+    transition: color 1s ease;
+}
+
+.logging a:hover{
+    color: rgba(163, 87, 235, 0.731);
+}
+
+.alert a{
+    transition: color 1s ease;
+}
+
+.alert a:hover{
+    color: rgb(245, 86, 86);
+}
