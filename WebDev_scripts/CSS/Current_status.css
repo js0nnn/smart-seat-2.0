@@ -4,15 +4,31 @@
     src: url(/Poppins/Poppins-Regular.ttf);
 }
 
+*::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+*{
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: content-box;
     background-color:black;
     color: white;
-
-
+    text-size-adjust: none;
 }
+
+@media screen and (max-width:1024px){
+    *{
+        overflow: auto;
+    }
+}
+
 
 
 main{
@@ -25,14 +41,14 @@ main{
 .main-grid{
     position: relative;
     bottom:50px;
-    margin-left:6%;
-    
+    margin-left:4%;
     padding: 8px;
     display: grid;
     margin-top:2%;
-    grid-template-columns:repeat(4,200px);
+    grid-template-columns:repeat(5,200px);
     grid-gap:4%;
     max-height: 100%;
+    
 
 }
 
@@ -41,11 +57,11 @@ main{
     position: relative;
     left: 75%;
     top:10px;
-    width: 15%;
+    width: 20%;
     border: 1px white solid;
     border-radius:15px;
     padding: 16px;
-    box-shadow: 0 0 15px 2px white;
+    box-shadow: 0 0 5px 2px white;
     transition: box-shadow 1s ease-in-out;
 }
 
@@ -67,18 +83,20 @@ main{
     padding: 20px;
     width: 30%;
     height: 50px;
-    box-shadow: 0 0 15px 2px white;
+    box-shadow: 0 0 5px 2px white;
     transition: box-shadow 1s ease-in-out;
+    
 }
 
 .Overall-Grid:hover{
-    box-shadow: 0 0  15px 2px  rgb(48, 86, 237);
+    box-shadow: 0 0  15px 2px  rgb(89, 223, 111);
 }
 
 
 .Drowsiness{
     padding-top:8px;
     color: #A3C4F7 ;
+    
 }
 
 .Drowsiness-Title{
@@ -110,13 +128,13 @@ main{
     border: 1px white solid;
     border-radius:15px;
     padding: 32px;
-    box-shadow: 0 0 15px 2px white;
+    box-shadow: 0 0 5px 2px white;
     transition: box-shadow 1s ease-in-out;
 
 }
 
 .Vital-Grid:hover{
-    box-shadow: 0 0  15px 2px  rgb(4, 117, 209);
+    box-shadow: 0 0  15px 2px  rgb(89, 223, 111);
 }
 
 .Vital-Title{
@@ -124,7 +142,7 @@ main{
     font-weight:bold;
 }
 
-.Vital{
+.Vital-Status{
     padding-top:16px;
     padding-bottom:16px;
     color:  #D8B4DD;
@@ -143,16 +161,29 @@ main{
     color: #A3C4F7 ;
 }
 
+
+.Temperature-Title{
+    color: white;
+}
+
+.Temperature-rate{
+    padding-top:16px;
+    padding-bottom:16px;
+    color: #A3C4F7 ;
+}
+
 .Head-Grid{
     border: 1px white solid;
     border-radius:15px;
     padding: 32px;
-    box-shadow: 0 0 15px 2px white;
+    box-shadow: 0 0 5px 2px white;
     transition: box-shadow 1s ease-in-out;
+    overflow: hidden;
+    
 }
 
 .Head-Grid:hover{
-    box-shadow: 0 0  15px 2px  rgb(205, 70, 232)
+    box-shadow: 0 0  15px 2px rgb(89, 223, 111);
 }
 
 .Head-Status-title{
@@ -188,12 +219,12 @@ main{
     border: 1px white solid;
     border-radius:15px;
     padding: 32px;
-    box-shadow: 0 0 15px 2px white;
+    box-shadow: 0 0 5px 2px white;
     transition: box-shadow 1s ease-in-out;
 }
 
 .Leg-Grid:hover{
-    box-shadow: 0 0  15px 2px  rgb(229, 229, 64);
+    box-shadow: 0 0  15px 2px  rgb(89, 223, 111);
 }
 
 .Leg-status-title{
@@ -269,16 +300,58 @@ main{
 
 */
 
+.Tilt-Grid{
+    border: 1px white solid;
+    border-radius:15px;
+    padding: 32px;
+    box-shadow: 0 0 5px 2px white;
+    transition: box-shadow 1s ease-in-out;
+}
+
+.Tilt-Title{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.Tilt-Status{
+    padding-top:8px;
+    padding-bottom: 8px;
+    color: #D8B4DD;
+}
+
+.Tilt-x-values{
+    padding-top:8px;
+    padding-bottom:8px;
+    color: #A3C4F7;
+}
+
+.Tilt-y-values{
+    padding-top:8px;
+    padding-bottom:8px;
+    color: #A3C4F7;
+}
+
+.Tilt-z-values{
+    padding-top:8px;
+    padding-bottom:8px;
+    color: #A3C4F7;
+}
+
+.Tilt-Grid:hover{
+    box-shadow: 0 0  15px 2px  rgb(89, 223, 111);
+}
+
+
 .Alert-Grid{
     border: 1px white solid;
     border-radius:15px;
     padding: 32px;
-    box-shadow: 0 0 15px 2px white;
+    box-shadow: 0 0 5px 2px white;
     transition: box-shadow 1s ease-in-out;
 }
 
 .Alert-Grid:hover{
-    box-shadow: 0 0  15px 2px  rgba(235, 59, 59, 0.872);
+    box-shadow: 0 0  15px 2px  rgb(89, 223, 111);
 }
 
 .Alerts-Title{
@@ -292,7 +365,13 @@ main{
     color:#DC143C;
 }
 
+.normal{
+    color:rgb(89, 223, 111);
+}
 
+.abnormal{
+    color: #DC143C ;
+}
 /*Animation from here onwards*/
 
 .Overall-Grid{
@@ -332,6 +411,5 @@ body main div.main-grid>div{
 body.loaded main div.main-grid>div{
     opacity: 1;
     transform: translateX(0);
-
 
 }

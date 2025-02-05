@@ -4,12 +4,22 @@
     src: url(/Poppins/Poppins-Regular.ttf);
 }
 
+*::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+*{
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: content-box;
     background-color:black;
-
+    text-size-adjust: none;
 }
 
 
@@ -62,6 +72,7 @@ body.loaded main>div{
 
 .asset{
     margin-top: 16px;
+    margin-right:300px;
     margin-bottom: 16px;
     padding:8px;
     max-height:100%;
@@ -75,7 +86,7 @@ body.loaded main>div{
 
 .asset a{
     position:relative;
-    left: 35px;
+    left: 34px;
     bottom:20px;
     text-decoration: none;
     font-family: Poppins;
@@ -86,11 +97,13 @@ body.loaded main>div{
 
 .asset p{
     
+    font-size:16px;
 }
 
 
 .logging{
     margin-bottom: 16px;
+    margin-right:130px;
     padding: 8px;
     max-height:100%;
 }
@@ -113,12 +126,13 @@ body.loaded main>div{
 }
 
 .logging p{
-    
+    font-size:16px;
 }
 
 .alert{
     padding: 8px;
     max-height:100%;
+
 }
 
 .alert img{
@@ -138,7 +152,7 @@ body.loaded main>div{
 }
 
 .alert p{
-    
+    font-size:16px;
 }
 
 .asset a{

@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="/CSS/header.css">
         <link rel="stylesheet" href="/CSS/Current_status.css">
         <link rel="icon" href="/Assests/blackspace.png" type="image/png" sizes="32x32">
+        
+
     </head>
         <body>
             <header>
@@ -17,7 +19,7 @@
                     <ul class="nav-list" id="nav-list-id">
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="/HTML/Current_status.html">Current status</a></li>
-                        <li><a href="/HTML/Drivers_log.html">Drivers Log</a></li>
+                        <li><a href="/HTML/Drivers_Log_info.html">Drivers Log</a></li>
                         <li><a href="/HTML/Alerts.html">Alerts</a></li>
                     </ul>
                 </nav>
@@ -26,7 +28,7 @@
                 <main>
                     <div class="Date-time-box">
                         <div class="Date-Time-Value">Date and Time</div>
-                        <div class="Date-Time">28/12/2024, 9:50:02 am</div> <!-- value-->
+                        <div class="Date-Time" id="date-time">Awaiting Data</div> <!-- value-->
                     </div>
     
     
@@ -34,10 +36,10 @@
     
                     <div class="Overall-Grid">
                         <div class="Drowsiness-Title">Drowsiness</div>
-                        <div class="Drowsiness">10%</div> <!-- value-->
+                        <div class="Drowsiness" id="Drowsiness">Awaiting Data</div> <!-- value-->
                         <div class="Seat-Status-Grid">  
                             <div class="Seat-Status-title">Seat Status</div>
-                            <div class="Seat-Status">Normal</div>  <!-- value-->
+                            <div class="Seat-Status" id="Seat-Status">Awaiting Data</div>  <!-- value-->
                         </div>
     
                     </div>
@@ -46,35 +48,37 @@
     
                         <div class="Vital-Grid">
                             <div class="Vital-Title">Vitals</div>
-                            <div class="Vital">Normal</div>
+                            <div class="Vital-Status" id="Vital-Status">Awaiting Data</div>
                             <div class="Heart-rate-Title">Heart Rate</div>
-                            <div class="Heart-rate">75.67 BPM</div>
+                            <div class="Heart-rate" id="Heart-rate">Awaiting Data</div>
                             <div class="Breathing-rate-Title">Breathing Rate</div>
-                            <div class="Breathing-rate">67.98 RR</div>
+                            <div class="Breathing-rate" id="Breathing-rate">Awaiting Data</div>
+                            <div class="Temperature-Title">Temperature</div>
+                            <div class="Temperature-rate" id="Temperature-rate">Awaiting Data</div>
                         </div>
                         
          
     
                         <div class="Head-Grid">
                             <div class="Head-Status-title">Head Status</div>
-                            <div class="Head-Status">Normal</div>  <!-- value-->
+                            <div class="Head-Status" id="Head-Status">Awaiting Data</div>  <!-- value-->
                             <div class="Head-1-title">Head position 1</div>
-                            <div class="Head-1">100 mm</div> <!-- value-->
+                            <div class="Head-1" id="Head-1">Awaiting Data</div> <!-- value-->
                             <div class="Head-2-title">Head position 2</div>  
-                            <div class="Head-2">250 mm</div>  <!-- value-->
+                            <div class="Head-2" id="Head-2">Awaiting Data</div>  <!-- value-->
     
                         </div>
                         <div class="Leg-Grid">
                             <div class="Leg-status-title">Leg Status</div>
-                            <div class="Leg-status">Normal</div> <!-- value-->
+                            <div class="Leg-status" id="Leg-status">Awaiting Data</div> <!-- value-->
                             <div class="leg-1-title">Left position 1</div>
-                            <div class="leg-1">390 mm</div> <!-- value-->
+                            <div class="leg-1" id="leg-1">Awaiting Data</div> <!-- value-->
                             <div class="leg-2-title">Left position 2</div>
-                            <div class="leg-2">670 mm</div> <!-- value-->
+                            <div class="leg-2" id="leg-2">Awaiting Data</div> <!-- value-->
                             <div class="leg-3-title">Right position 1</div>
-                            <div class="leg-3">630 mm</div> <!-- value-->
+                            <div class="leg-3" id="leg-3">Awaiting Data</div> <!-- value-->
                             <div class="leg-4-title">Right position 2</div>
-                            <div class="leg-4">870 mm</div> <!-- value-->
+                            <div class="leg-4" id="leg-4">Awaiting Data</div> <!-- value-->
                         </div>
                             <!--
                             
@@ -88,10 +92,21 @@
                         <div class="Air-Quality-element">CO2</div>  
                     </div>
                     -->
+
+                        <div class="Tilt-Grid">
+                            <div class="Tilt-Title">Tilt Status</div>
+                            <div class="Tilt-Status" id="Tilt-Status">Awaiting Data</div>
+                            <div class="Tilt-x-title">X-axis</div>
+                            <div class="Tilt-x-values" id="Tilt-x-values">Awaiting Data</div>
+                            <div class="Tilt-y-title">Y-axis</div>
+                            <div class="Tilt-y-values" id="Tilt-y-values">Awaiting Data</div>
+                            <div class="Tilt-z-title">Z-axis</div>
+                            <div class="Tilt-z-values" id="Tilt-z-values">Awaiting Data</div>
+                        </div>
     
                         <div class="Alert-Grid">
                             <div class="Alerts-Title">Alerts</div>
-                            <div class="Alerts">Awaiting Data</div>
+                            <div class="Alerts" id="Alerts">Awaiting Data</div>
                         </div>
                     
                     
@@ -103,9 +118,11 @@
             <footer>
 
             </footer>
+            
+            <script src="https://cdn.jsdelivr.net/npm/date-fns@4.1.0/cdn.min.js"></script>
             <script src="/JS/header.js"></script>
             <script src="/JS/website load.js"></script>
-            <script src="/JS/Current_status.js"></script>
+            <script type="module" src="/JS/Current_status.js"></script>
         </body>
 
 </html>
