@@ -33,6 +33,9 @@ header *{
     animation: rotate 8s linear infinite;
    
 }
+.end{
+    color: #D7A6FF;
+}
 
 @keyframes rotate{
     from{
