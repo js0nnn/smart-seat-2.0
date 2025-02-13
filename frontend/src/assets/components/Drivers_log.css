@@ -1,0 +1,95 @@
+
+@font-face {
+    font-family:Poppins;
+    src: url(/Poppins/Poppins-Regular.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+    background-color:black;
+    
+    
+}
+
+body{
+    font-family: Poppins;
+    color: white;
+    height: 100%;
+
+}
+
+
+table caption{
+    font-weight: bold;
+    padding-top:16px;
+}
+
+table{
+    position: relative;
+    left: 4%;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 2s ease,transform 2s ease;
+
+}
+
+table th{
+    padding:32px;
+}
+
+
+.loading-row{
+    position: relative;
+    left: 32px;
+    color: white;
+    font-family: Poppins;
+
+}
+
+td{
+    padding-top:16px;
+    
+}
+
+.Date-Time{
+    position: relative;
+    right: 32px;
+}
+
+.Date-Time-Data{
+    position: relative;
+    right: 32px;
+
+}
+
+body.loaded table{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.awaiting-data{
+    font-family: Poppins;
+    color: #A3C4F7 ;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right:48%;
+    top:48%;
+    font-size: 32px;
+    font-weight: 200;
+    opacity:0;
+    transform:translateY(100%);
+    transition: opacity 2s ease,transform 2s ease;
+    
+}
+
+body.loaded div.awaiting-data{
+    opacity:1;
+    transform:translateY(0);
+}
