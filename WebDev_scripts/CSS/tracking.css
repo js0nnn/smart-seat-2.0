@@ -23,7 +23,7 @@
 .gps-grid{
     position: relative;
     top:3em;
-    max-width:40%;
+    max-width:50%;
     border: 1px white solid;
     border-radius:4px;
     box-shadow: 0 0 5px 2px white;
