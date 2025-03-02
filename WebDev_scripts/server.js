@@ -4,12 +4,30 @@ const path =require('path')
 const mysql =require('mysql2')
 const date_fns=require('date-fns')
 
+require('dotenv').config()
 
-const PORT=3000
 const server=express()
-const db=mysql.createConnection("mysql://root:password@127.0.0.1:3306/driver_monitoring")
-const alert_db=mysql.createConnection("mysql://root:password@127.0.0.1:3306/alerts")
-const contact_db=mysql.createConnection("mysql://root:password@127.0.0.1:3306/contacts")
+const db=mysql.createConnection({
+    host:process.env.DB_HOST,
+    user:process.env.DB_USER,
+    password:process.env.DB_PASSWORD,
+    database:process.env.DB_NAME1,
+    port:process.env.DB_PORT,
+})
+const alert_db=mysql.createConnection({
+    host:process.env.DB_HOST,
+    user:process.env.DB_USER,
+    password:process.env.DB_PASSWORD,
+    database:process.env.DB_NAME2,
+    port:process.env.DB_PORT,
+})
+const contact_db=mysql.createConnection({
+    host:process.env.DB_HOST,
+    user:process.env.DB_USER,
+    password:process.env.DB_PASSWORD,
+    database:process.env.DB_NAME3,
+    port:process.env.DB_PORT,
+})
 
 server.use(express.json())
 server.use(express.static(path.join(__dirname)))
@@ -214,8 +232,8 @@ server.get("/contacts_db_read",function(req,res){
 
 
 
-server.listen(PORT,function(){
-    console.log("Server is listening in port "+PORT)
+server.listen(process.env.SERVER_PORT,function(){
+    console.log("Server is listening in port "+process.env.SERVER_PORT)
 })
 
 

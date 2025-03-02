@@ -115,19 +115,31 @@ body.loaded .map iframe{
 .colon-1{
     margin-left:150px;
 }
+
 .colon-2{
     padding-left:135.5px;
 }
+
 .colon-3{
     padding-left:80px;
 }
+
 .colon-4{
     padding-left:164px;
 }
+
 .colon-5{
     padding-left:30px;
 }
 
+
+.altitude-value{
+    color: #A3C4F7;
+}
+
+.speed-value{
+    color: #A3C4F7;
+}
 
 footer{
     padding: 32px;
