@@ -19,6 +19,7 @@
     padding: 0px;
     box-sizing: content-box;
     background-color:black;
+    -webkit-text-size-adjust: none;
     text-size-adjust: none;
 }
 

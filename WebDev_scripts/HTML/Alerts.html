@@ -16,7 +16,9 @@
                 <nav>
                     <ul class="nav-list" id="nav-list-id">
                         <li><a href="../index.html">Home</a></li>
-                        <li><a href="/HTML/Current_status.html">Current status</a></li>
+                        <li><a href="/HTML/all_driver.html">All Drivers</a></li>
+                        <li><a href="/HTML/Tracking.html">Tracking</a></li>
+                        <li><a href="/HTML/users.html">Users</a></li>
                         <li><a href="/HTML/Drivers_Log_info.html">Drivers Log</a></li>
                         <li><a href="/HTML/Alerts.html">Alerts</a></li>
                     </ul>
@@ -24,8 +26,11 @@
             </header>
             
             <main>
-                <div class="for-now">There are no Alerts for now</div>
-
+                <button class="check-prior-alerts" id="check-prior-alerts">Old Alerts</button>
+                <div class="for-now" id="for-now">There are no Alerts for now</div>
+                <div class="alert-main-flex" id="alert-main-flex">
+                    
+                </div>
             </main>
             
             
@@ -34,7 +39,8 @@
             </footer>
             <script src="/JS/header.js"></script>
             <script src="/JS/website load.js"></script>
-            <script src="/JS/Alert.js"></script>
+            <script type="module" src="/JS/Alert.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/date-fns@4.1.0/cdn.min.js"></script>
         </body>
 
 

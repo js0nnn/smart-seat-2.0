@@ -8,13 +8,13 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import sessionmaker
 
 Base=declarative_base()
-engine=create_engine("mysql://root:password@127.0.0.1:3306/raspberry_pi")
+engine=create_engine("mysql://root:password@127.0.0.1:3306/driver_monitoring")
 
 
 
-class Driver(Base):
+class sensor_readings(Base):
 
-    __tablename__="Driver"
+    __tablename__="sensor_readings"
 
     Date_and_time=Column(sqlalchemy.DATETIME,primary_key=True)
     
@@ -23,7 +23,7 @@ class Driver(Base):
 
     Vitals_Status=Column(Integer,nullable=False)
     Heart_Rate =Column(sqlalchemy.DECIMAL(10,2),nullable=False)
-    Breathing_Rate=Column(sqlalchemy.DECIMAL(10,2),nullable=False)
+    spo2=Column(sqlalchemy.DECIMAL(10,2),nullable=False)
     Temperature_Rate=Column(sqlalchemy.DECIMAL(10,2),nullable=False)
 
     Head_Status=Column(Integer,nullable=False)
@@ -42,6 +42,16 @@ class Driver(Base):
     Tilt_Z=Column(sqlalchemy.DECIMAL(10,2),nullable=False)
 
     Alert_status=Column(Integer,nullable=False)
+
+    latitude=Column(sqlalchemy.DECIMAL(10,7),nullable=False)
+    longitude=Column(sqlalchemy.DECIMAL(10,7),nullable=False)
+
+    speed=Column(sqlalchemy.DECIMAL(10,3),nullable=False)
+    altitude=Column(sqlalchemy.DECIMAL(10,6),nullable=False)
+    ambient_temp=Column(sqlalchemy.DECIMAL(10,2),nullable=False)
+    humidity=Column(sqlalchemy.DECIMAL(10,2),nullable=False)
+    environment_status=Column(Integer,nullable=False)
+    
 
 
 
@@ -62,7 +72,7 @@ def data_generator():
 
         Vitals_Status=random.randint(0,1)
         Heart_Rate =random.uniform(1.00,160.00)
-        Breathing_Rate=random.uniform(1.00,35.00)
+        spo2=random.uniform(1.00,35.00)
         Temperature_Rate=random.uniform(1.00,45.00)
 
         Head_Status=random.randint(0,1)
@@ -82,8 +92,18 @@ def data_generator():
 
         Alert_status=random.randint(0,1)
 
+        latitude=random.uniform(-90.0000000,90.0000000)
+        longitude=random.uniform(-180.0000000,180.0000000)
 
-        Driver_data=Driver(
+
+        speed=random.uniform(1.00,1000.00)
+        altitude=random.uniform(1.00,1000.00)
+        ambient_temp=random.uniform(1.00,1000.00)
+        humidity=random.uniform(1.00,1000.00)
+        environment_status=random.randint(0,1)
+        
+
+        Driver_data=sensor_readings(
 
             Date_and_time=Date_and_time,
             Drowsiness_value=Drowsiness_value,
@@ -91,7 +111,7 @@ def data_generator():
 
             Vitals_Status=Vitals_Status,
             Heart_Rate =Heart_Rate,
-            Breathing_Rate=Breathing_Rate,
+            spo2=spo2,
             Temperature_Rate=Temperature_Rate,
 
             Head_Status=Head_Status,
@@ -109,7 +129,18 @@ def data_generator():
             Tilt_Y=Tilt_Y,
             Tilt_Z=Tilt_Z,
 
-            Alert_status=Alert_status
+            Alert_status=Alert_status,
+
+            
+            latitude=latitude,
+            longitude=longitude,
+
+
+            speed=speed,
+            altitude=altitude,
+            ambient_temp=ambient_temp,
+            humidity=humidity,
+            environment_status=environment_status,
             
         )
         session.add(Driver_data)

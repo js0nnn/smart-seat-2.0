@@ -9,6 +9,7 @@ const Seat_Status=document.getElementById("Seat-Status")
 const Vitals_Status=document.getElementById("Vital-Status")
 const Leg_status =document.getElementById("Leg-status")
 const tilt_status=document.getElementById("Tilt-Status")
+const environment_status=document.getElementById("Environment-Status")
 
 const heart_rate_value=document.getElementById("Heart-rate")
 const Drowsiness_value=document.getElementById("Drowsiness")
@@ -30,6 +31,10 @@ const tilt_value_y=document.getElementById("Tilt-y-values")
 const tilt_value_z=document.getElementById("Tilt-z-values")
 
 const Alerts=document.getElementById("Alerts")
+
+const ambient_temp=document.getElementById("ambient-temperature-value")
+const humidity=document.getElementById("humidity-value")
+
 
 function change_date(element,parameter){
     
@@ -82,6 +87,7 @@ async function updater(time){
             fetch("/data")
             .then(response => response.json())
             .then(data =>{
+                
                 change_date(date_time,data.Date_and_time)
 
                 change_status(Seat_Status,data.Seat_Status,"Occupied","Unoccupied")
@@ -90,7 +96,7 @@ async function updater(time){
                 
                 change_status(Vitals_Status,data.Vitals_Status,"Normal","Abnormal")
                 change_value(heart_rate_value,data.Heart_Rate,"BPM")
-                change_value(Breathing_rate_value,data.Breathing_Rate,"RR")
+                change_value(Breathing_rate_value,data.spo2,"RR")
                 change_value(Temperature_rate_value,data.Temperature_Rate,"C")
 
                 change_status(Head_Status,data.Head_Status,"Normal","Abnormal")
@@ -109,6 +115,14 @@ async function updater(time){
                 change_value(tilt_value_z,data.Tilt_Z,"degrees")
                 
                 alerts(Alerts,data.Alert_status)
+
+                change_value(tilt_value_y,data.Tilt_Y,"degrees")
+                change_value(tilt_value_z,data.Tilt_Z,"degrees")
+
+                change_status(environment_status,data.environment_status,"Normal","Abnormal")
+                change_value(ambient_temp,data.ambient_temp,"")
+                change_value(humidity,data.humidity,"")
+
                 
     })
     },time)}

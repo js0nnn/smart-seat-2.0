@@ -4,15 +4,7 @@
     src: url(/Poppins/Poppins-Regular.ttf);
 }
 
-*::-webkit-scrollbar {
-    display: none;
-  }
-  
-  
-*{
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
-}
+
 
 *{
     margin: 0px;
@@ -21,11 +13,12 @@
     background-color:black;
     color: white;
     text-size-adjust: none;
+    -webkit-text-size-adjust: none;
 }
 
 @media screen and (max-width:1024px){
     *{
-        overflow: auto;
+        overflow-y: auto;
     }
 }
 
@@ -42,14 +35,15 @@ main{
     position: relative;
     bottom:50px;
     margin-left:4%;
+    width:100%;
     padding: 8px;
     display: grid;
     margin-top:2%;
-    grid-template-columns:repeat(5,200px);
-    grid-gap:4%;
+    grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+    grid-gap:1.5%;
     max-height: 100%;
-    
-
+    padding-bottom:20px;
+    overflow-y:hidden;
 }
 
 
@@ -63,6 +57,7 @@ main{
     padding: 16px;
     box-shadow: 0 0 5px 2px white;
     transition: box-shadow 1s ease-in-out;
+    overflow: hidden;
 }
 
 .Date-time-box:hover{
@@ -85,8 +80,8 @@ main{
     height: 50px;
     box-shadow: 0 0 5px 2px white;
     transition: box-shadow 1s ease-in-out;
-    
-}
+    overflow: hidden;
+}   
 
 .Overall-Grid:hover{
     box-shadow: 0 0  15px 2px  rgb(89, 223, 111);
@@ -194,7 +189,7 @@ main{
 
 .Head-Status{
 
-    padding-top:16px;
+    padding-top:12px;
     padding-bottom:16px;
     color: #D8B4DD ;
 }
@@ -365,6 +360,46 @@ main{
     color:#DC143C;
 }
 
+.Environment-Grid{
+    margin-top: 8px;
+    border: 1px white solid;
+    border-radius:15px;
+    padding: 32px;
+    box-shadow: 0 0 5px 2px white;
+    transition: box-shadow 1s ease-in-out;
+}
+
+.Environment-Grid:hover{
+    box-shadow: 0 0  15px 2px  rgb(89, 223, 111);
+}
+
+.Environment-Status{
+    padding-top:8px;
+    padding-bottom:8px;
+    color:#D8B4DD;
+}
+
+.environment-title{
+    font-size:24px;
+    font-weight:bold;
+    width: 110%;
+}
+
+.ambient-temperature-title{
+    width:115%;
+}
+
+.ambient-temperature-value{
+    padding-top:16px;
+    padding-bottom:16px;
+    color: #A3C4F7; ;
+}
+
+.humidity-value{
+    padding-top:16px;
+    padding-bottom:16px;
+    color: #A3C4F7; ;
+}
 .normal{
     color:rgb(89, 223, 111);
 }

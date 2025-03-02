@@ -4,22 +4,14 @@
     src: url(/Poppins/Poppins-Regular.ttf);
 }
 
-*::-webkit-scrollbar {
-    display: none;
-  }
-  
-  
-*{
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
-}
+
 
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: content-box;
     background-color:black;
-    
+    -webkit-text-size-adjust: none;
     
 }
 
@@ -37,16 +29,18 @@ table caption{
 }
 
 table{
+
     position: relative;
     left: 4%;
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 2s ease,transform 2s ease;
-
+    padding-bottom:50px;
 }
 
 table th{
-    padding:32px;
+    padding:8px 16px 0px 32px;
+    text-align:left;
 }
 
 
@@ -60,6 +54,7 @@ table th{
 
 td{
     padding-top:16px;
+    text-align: left;
     
 }
 
@@ -83,20 +78,46 @@ body.loaded table{
 
 .awaiting-data{
     font-family: Poppins;
+    font-size: 32px;
+    font-weight: 100;
     color: #A3C4F7 ;
     display: flex;
     flex-direction:row;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    right:48%;
-    top:48%;
-    font-size: 32px;
-    font-weight: 200;
-    opacity:0;
+    
+    margin-right:30%;
     transform:translateY(100%);
+    opacity:0;
     transition: opacity 2s ease,transform 2s ease;
     
+}
+
+.go-back-btn{
+    width:10%;
+    color: cyan;
+    background-color:  #2A1A69;
+    border-color: #C0C0C0;
+    margin:5% 0% 10% 30%;
+    opacity:0;
+    padding:4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform:translateY(100%);
+    transition: opacity 2s ease,transform 2s ease;
+}
+
+@media screen and (max-width:1024px){
+    .awaiting-data{
+        margin-bottom:0px;
+        margin-right:0px; 
+    }
+}
+
+body.loaded button.go-back-btn{
+    opacity:1;
+    transform:translateY(0);
 }
 
 body.loaded div.awaiting-data{

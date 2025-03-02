@@ -1,0 +1,151 @@
+
+@font-face {
+    font-family:Poppins;
+    src: url(/Poppins/Poppins-Regular.ttf);
+}
+
+
+
+*{
+    background-color: black;
+    font-family: Poppins;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+    background-color:black;
+    color: white;
+    -webkit-text-size-adjust: none;
+
+}
+
+.container{
+    margin-top:4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap:8px;
+    margin-left:40%;
+    opacity:0;
+    transform:translateY(-100%);
+    transition:opacity 1s ease-in,transform 1s ease-in-out;
+}
+
+.name-title{
+
+}
+
+.phone-number-title{
+
+}
+
+.name{
+    width: 30%;
+    margin:8px 0px 8px 0px;
+    appearance: none;
+    background-color:#2D1B69;
+    color:  #D3B0FF;
+    border: #9B4DFF 1px solid;
+}
+
+.name::placeholder{
+    color:rgb(43, 192, 226);
+}
+
+.number{
+    width: 30%;
+    margin:8px 0px 2px 0px;
+    appearance: none;
+    background-color:#2D1B69;
+    color:  #D3B0FF;
+    border: #9B4DFF 1px solid;
+}
+
+.number::placeholder{
+    color:rgb(43, 192, 226);
+}
+
+.error{
+    width:50%;
+    position: relative;
+    left:3%;
+    margin: 8px;
+    font-family: Poppins;
+    font-size:16px;
+    color: red;
+
+}
+
+.submit-btn{
+    width:10%;
+    margin:0px 0px 8px 0px;
+    color: cyan;
+    background-color:  #2A1A69;
+    border-color: #C0C0C0;
+    padding:4px 16px 4px 16px;
+}
+
+.remove-btn{
+    width:10%;
+    margin:2px 0px 8px 0px;
+    color: cyan;
+    background-color:  #2A1A69;
+    border-color: #C0C0C0;
+    padding:4px 16px 4px 16px;
+}
+
+.refresh-btn{
+    width:10%;
+    margin:2px 0px 8px 0px;
+    color: cyan;
+    background-color:  #2A1A69;
+    border-color: #C0C0C0;
+    padding:4px 16px 4px 16px;
+}
+
+
+
+.phone-list-title{
+    margin-top: 10%;
+    margin-bottom:5%;
+    position: relative;
+    right:40%;
+    font-size: 24px;
+}
+
+.no_num{
+    font-family: Poppins;
+    font-size: 24;
+    color: #D3B0FF;
+}
+
+
+.name-append{
+    width:fit-content;
+    font-family: Poppins;
+    font-size: 24;
+    color:#D3B0FF;
+}
+
+.number-append{
+    font-family: Poppins;
+    font-size: 24;
+    color:#A3C4F7;
+    position: relative;
+    padding:8px;
+}
+
+.data-append{
+    padding:4px;
+}
+
+
+footer{
+    padding: 50px;
+}
+
+
+body.loaded .container{
+    opacity: 1;
+    transform: translateY(0);
+}

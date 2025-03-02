@@ -1,0 +1,104 @@
+
+@font-face {
+    font-family:Poppins;
+    src: url(/Poppins/Poppins-Regular.ttf);
+}
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+    background-color:black;
+    -webkit-text-size-adjust: none;
+    color: white;
+
+}
+
+.drivers-list-title{
+    font-family: Poppins;
+    color: white;
+    font-size:32px;
+    padding:2% 0% 0% 2%;
+    opacity:0;
+    transform: translateX(-100%);
+    transition: opacity 1s ease-out,transform 1s ease-out;
+}
+
+body.loaded div.drivers-list-title{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.drivers-list{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding-top:1%;
+    padding-left: 2%;
+
+}
+
+.driver-1{
+    margin:2%;
+    max-width:40%;
+    max-height:10%;
+    border: 1px white solid;
+    border-radius:4px;
+    box-shadow: 0 0 5px 2px white;
+    padding:20px;
+    box-shadow: 0 0 5px 2px white;
+    opacity:0;
+    transform: translateX(100%);
+    transition: opacity 1s ease-out,transform 1s ease-out;
+}
+
+.driver-1:hover{
+    box-shadow: 0 0 15px 2px rgb(89, 223, 111);
+}
+
+body.loaded .drivers-list > .driver-1{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.driver-1-title{
+    max-width:40%;
+    font-family: Poppins;
+    font-size:24px;
+    opacity:0;
+
+}
+
+body.loaded div.driver-1-title{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.driver-1-value{
+    padding:8px 0px 0px 0px;
+    font-family: Poppins;
+    color: #A3C4F7;
+}
+
+.driver-1-status{
+    font-family: Poppins;
+    width:54%;
+    font-size:16px;
+    margin:24px 0px 0px 0px;
+}
+
+.btn-check{
+    max-width:16%;
+    text-align:center;
+    margin:0px 0px 0px 0px;
+    color: cyan;
+    background-color:  #2A1A69;
+    border-color: #C0C0C0;
+    padding:4px 16px 4px 16px;
+    position:relative;
+    left:70%;
+    
+}
