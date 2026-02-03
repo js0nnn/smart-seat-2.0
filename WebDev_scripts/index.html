@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1024">
+        <title>Watch Operations</title>
+        <link rel="stylesheet" href="/CSS/index.css">
+        <link rel="stylesheet" href="/CSS/header.css">
+        <link rel="icon" href="/Assests/blackspace.png" type="image/png" sizes="32x32">
+    </head>
+        <body>
+            <header>
+                <img src="/Assests/space.png" class="logo">
+                <h1 class="header-title">Watch Operations</h1>
+                <nav>
+                    <ul class="nav-list" id="nav-list-id">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/HTML/all_driver.html">All Drivers</a></li>
+                        <li><a href="/HTML/Tracking.html">Tracking</a></li>
+                        <li><a href="/HTML/users.html">Users</a></li>
+                        <li><a href="/HTML/Drivers_Log_info.html">Drivers Log</a></li>
+                        <li><a href="/HTML/Alerts.html">Alerts</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <main>
+                
+                <div class="asset">
+                        <img src="/Assests/status.png" alt="status">
+                        <a href="/HTML/all_driver.html">Current Status</a>
+                        <p>This page tells about the current status of the driver in real time  <br>
+                            by interacting with the raspberry pi following which the data is projected<br>
+                        to the frontend with slight modifications.</p>
+                    </div>
+               
+                <div class="logging">
+                    <img src="/Assests/logging .png" alt="status">
+                    <a href="/HTML/Drivers_Log_info.html">Drivers log</a>
+                    <p>This page logs information about the drivers activites once the raspberry pi is active<br>
+                        and continues to do so till the pi is turned off ,this feature was implemented so that the <br>
+                        authorized personal can monitor what is going on and refer the data at a later time if required.
+                    </p>
+                </div>
+                <div class="alert">
+                    <img src="/Assests/alert.png" alt="status">
+                    <a href="/HTML/Alerts.html">Alerts</a>
+                    <p>Should the driver be drowsy or in any condition be asleep despite the features implemented<br>
+                        to prevent it or in a worse case scenario encounter any accident the pi sends out information<br>
+                        regarding the incident which is displayed on this Webpage while also alerting the repective emergency personal
+                    </p>
+                </div>
+
+            </main>
+            
+            
+            <footer>
+
+            </footer>
+            <script src="/JS/website load.js"></script>
+            <script src="/JS/header.js"></script>
+        </body>
+
+</html>

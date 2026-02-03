@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1024">
+        <title>Watch Operations</title>
+        <link rel="stylesheet" href="/CSS/header.css">
+        <link rel="stylesheet" href="/CSS/users.css">
+        <link rel="icon" href="/Assests/blackspace.png" type="image/png" sizes="32x32">
+    </head>
+        <body>
+            <header>
+                <img src="/Assests/space.png" class="logo">
+                <h1 class="header-title">Watch Operations</h1>
+                <nav>
+                    <ul class="nav-list" id="nav-list-id">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="/HTML/all_driver.html">All Drivers</a></li>
+                        <li><a href="/HTML/Tracking.html">Tracking</a></li>
+                        <li><a href="/HTML/users.html">Users</a></li>
+                        <li><a href="/HTML/Drivers_Log_info.html">Drivers Log</a></li>
+                        <li><a href="/HTML/Alerts.html">Alerts</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <main>
+                <div class="container">
+                    <div>
+                        <div class="name-title">Name</div>
+                        <div><input type="text" class="name" id="name" required placeholder="Name"></div>  
+                    </div>
+                    <div>
+                        <div class="phone-number-title">Phone number</div>
+                        <div><input type="text" class="number" id="number" required placeholder="Phone Number"></div> 
+                    </div>
+                    <div class="error" id="error"></div>
+
+                    <div><button class="submit-btn" id="submit-btn">Submit</button></div>
+                    <div><button class="remove-btn" id="remove-btn">Remove</button></div>
+                    <div><button class="refresh-btn" id="refresh-btn">Refresh List</button></div>
+                    <div class="phone-list-title" id="phone-list-title">Message to Phone number : </div>
+                    <div class="phone-list" id="phone-list">
+                        <div class="no_num" id="no_num">No numbers as of now</div>
+                    </div>
+
+
+                
+            </main>
+            
+            
+            <footer>
+
+            </footer>
+            <script src="/JS/header.js"></script>
+            <script src="/JS/website load.js"></script>
+            <script type="module" src="/JS/users.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/date-fns@4.1.0/cdn.min.js"></script>
+        </body>
+
+
+
+</html>
