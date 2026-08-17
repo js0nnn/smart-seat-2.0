@@ -210,7 +210,12 @@ smart-seat-2.0/
 
 ---
 
-## 10. License
+## 10. Previous Version
 
-This project is developed for academic and educational purposes on collaboration with TATA's seat manufacturing department.
+This project was developed as a later version of the TM Seat project.
+
+The earlier version can be found here:
+
+**[TM-SEAT-V1](https://github.com/js0nnn/TM-SEAT-V1)**
+
 
